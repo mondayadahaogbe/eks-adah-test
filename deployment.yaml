@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: primus
-          image: 731604346635.dkr.ecr.us-east-2.amazonaws.com/github-test2:1.1
+          image: 731604346635.dkr.ecr.us-east-2.amazonaws.com/github-test2:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
