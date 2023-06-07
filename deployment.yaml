@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: primus
+  labels:
+    app: primus
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: primus
+  template:
+    metadata:
+      labels:
+        app: primus
+    spec:
+      containers:
+        - name: primus
+          image: 731604346635.dkr.ecr.us-east-2.amazonaws.com/github-test2:1.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
